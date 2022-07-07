@@ -1,0 +1,34 @@
+overview - 4 pilares
+*decomposição
+*reconhecimento de padroes - identificar padrões ou tendências / similaridades e diferenças entre os problemas - padrão comportamental
+*abstração - Extrapolar o conceito do problema para uma forma generalista
+*Design de algoritmos - automatizar / definir o passo a passo a solução do problema
+
+habilidades complementares
+
+raciocínio lógico = uma forma de pensamento estruturado : Indução - dedução - Abdução
+
+Aperfeiçoamento = 
+
+
+Busca binária
+Mais eficiênte que busca por varredura
+
+o que é lógica
+é uma organização coesa, forma de raciocínio
+
+técnica estruturada é mais complexa que a técnica linear, a técnica modular é mais fácil de decompor
+
+Fundamentos de algorítmos
+tipos de variáveis
+Numérica: inteiro / reais
+Caracter:
+lógico: Booleano (verdadeiro ou falso)
+
+Nome da variável: Faça sentido, primeira letra, sem espaços em branco, não utilizar caracter especial
+
+Instruções primitivas
+
+estrutura condicional
+
+
