@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Anúncio</title>
+</head>
+<body class="flex">
+        <div class="cabecalho">
+            <img src="./img/4bbm_logo.png" class="img_logo" alt="logo 4ºBBM" >
+            <div class="column">
+                <h1 class="title">Anúncio 4ºBBM</h1>
+                <h2 class="title">4ª ala  
+                <div id="current_date"></p>
+                    <script>
+                    date = new Date();
+                    year = date.getFullYear();
+                    month = date.getMonth() + 1;
+                    day = date.getDate();
+                    document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
+                    </script>
+                </div>  
+                </h2>
+            </div>
+            <div class="column">
+                <button class="btn"> Atualizar</button>   
+                <button class="btn"> Escolher outra data</button>   
+            </div>
+    </div>      
+    <div >
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Display: flex
+flex-direction : row/column
+flex-wrap: nowrap/wrap quebra ou nao a linha
+justify-content : flex-start / flex-end / center / space-between / space-around
+align-items : 
+flex-grow define o tamanho do elemento em relação aos outros(0,1,2,3,4)

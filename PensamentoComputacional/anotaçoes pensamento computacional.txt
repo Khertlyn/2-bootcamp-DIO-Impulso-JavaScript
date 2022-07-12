@@ -29,6 +29,23 @@ Nome da variável: Faça sentido, primeira letra, sem espaços em branco, não u
 
 Instruções primitivas
 
-estrutura condicional
+Estrutura condicional
+operadores lógicos : AND, OR E NOT
+
+Estrutura de repetição
+
+funções: são blocos de instruções , identificados por nomes e parâmetros
+
+
+Linguagens de programação
+
+
+orientação a objeto
+uma representação da realidade
+atributos, metodos, estados
+pilares da programação orientada a objeto
+
+
+portugol webstudio
 
 
