@@ -13,14 +13,7 @@
             <div class="column">
                 <h1 class="title">Anúncio 4ºBBM</h1>
                 <h2 class="title">4ª ala  
-                <div id="current_date"></p>
-                    <script>
-                    date = new Date();
-                    year = date.getFullYear();
-                    month = date.getMonth() + 1;
-                    day = date.getDate();
-                    document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
-                    </script>
+                <div id="current_date"></p>                  
                 </div>  
                 </h2>
             </div>
@@ -29,10 +22,46 @@
                 <button class="btn"> Prestar Anúncio</button>   
             </div>
     </div>      
-    <div >
-        <div class="item">item 1</div>
-        <div class="item">item 2</div>
-        <div class="item">item 3</div>
+    <!-- <div >
+        <table border="2" class="table-style">
+            <tr class="htable">
+                <th>CIA</th>
+                <th>Unidade</th>
+                <th>Militar</th>
+                <th>Brigadista</th>
+            </tr>
+           <tbody id="corpoDaTabela"></tbody>
+                <td colspan="2">Total</td>
+                <td></td>
+                <td></td>
+        </table>
+    </div> -->
+    <div class="table-flex">
+        <div class="table-flex-header">
+             <div class="table-flex-header"> Cia </div>
+             <div class="table-flex-header"> Unidade </div>   
+             <div class="table-flex-header"> Militares </div>    
+             <div class="table-flex-header"> Brigadista </div> 
+        </div>
+        <div id="table-flex-body">
+            <div class ="table-flex-total">
+                <div class ="table-flex-total table-flex-footer-g2">Total </div>
+                <div class ="table-flex-total"></div>
+                <div class ="table-flex-total"></div>
+            </div>
+        </div>
     </div>
+    <div >
+        <table border="2" class="table-style">
+            <tr class="htable">
+                <th>Período</th>
+                <th>Quantidade</th>
+            </tr>
+           <tbody id="corpoDaTabelaCiad"></tbody>
+                <td>Efetivo CIAD</td>
+                <td></td>
+        </table>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
