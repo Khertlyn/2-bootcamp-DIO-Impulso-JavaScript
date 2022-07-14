@@ -48,75 +48,68 @@
         }
         .column{
             flex-direction: column;
-            border: 0vh;
-        }
-        .htable{
-            background-color: #122A57;
-            color: white;
-            text-align: center;
-            border: 1px;
-        }
-        .text-column{
-            writing-mode: vertical-rl;
-        }
-        .table-style{
-            min-width: 20%;
-            width: 80%;
-            max-width: 80%;
-            margin: 2px solid blue ;
-            margin-top: 5%;
-        }
-        .table-flex{
-            display: flex;
-            border: 1px solid grey;
-            margin: 2px ;
-            justify-content: space-between;
-            flex: 1;
-            flex-direction: column;
-        }
-        .table-flex-header{
-            width: auto;
-            background: #122A57;
-            color: white;
-            display: flex;
-            justify-content: space-around;
-            border: 1px solid grey;
-            margin: 1px;
-            flex-grow: 1;
-            text-align: center;
-        }
-        .table-flex-footer-g2{
-            flex-grow: 2;
         }
 
-        /*#table-flex-body{
+        .text-column{
+            writing-mode: vertical-lr;
+        }
+
+        .table-30{
+            width: 30%;
+        }
+        .table-20{
+            width: 20%;
+        }
+        .table-50{
+            width: 50%;
+        }
+        .table-flex-main{
             display: flex;
-            border: 1px solid grey;
-            width: auto;
+            justify-content: center;
+            background-color: beige;
+        }
+        .table-dotted{
+        border-bottom: 1px dotted grey;
+        border-right: 1px dotted grey;
+        }
+
+        .table-flex{
+            display: flex;
+            margin: 2px ;
+            border:3px solid grey;
+        }
+        .table-flex-body{
             display: flex;
             justify-content: space-around;
+        }
+        .table-flex-header{
+            display: flex;
+            background: #122A57;
+            color: white;
+            border-bottom: 2px solid black;
+            border-right: 1px solid grey;
+            justify-content: space-around;
             margin: 1px;
-            flex-grow: 1;
             text-align: center;
-            flex-direction: column;
-        }*/
+        }
         .table-flex-total{
             display: flex;
-            border: 1px solid grey;
-            width: auto;
-            display: flex;
+            background-color: lightblue;
+            border-top: 2px solid black;
+            border-right: 1px solid grey;
             justify-content: space-around;
             margin: 1px;
-            flex-grow: 1;
             text-align: center;
         }
-        table.realceLinha tr:hover {
-            background: green;
-        }
+
+
+
 
     @media (max-width: 992px){
         .flex {
             flex-direction: column;
+            writing-mode:horizontal-tb;
         }
+
         
     }

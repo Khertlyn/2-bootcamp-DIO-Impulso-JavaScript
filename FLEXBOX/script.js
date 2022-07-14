@@ -25,11 +25,11 @@ let quantidadeDeUnidades = unidades.reverse().length;
 while(quantidadeDeUnidades){
     const indice = quantidadeDeUnidades - 1;
      minhaTabela.insertAdjacentHTML('beforeend',`
-<div class ="table-flex-total">
-    <div class ="table-flex-total">${unidades[indice].cia}</div>
-    <div class ="table-flex-total">${unidades[indice].nome}</div>
-    <div class ="table-flex-total"></div>
-    <div class ="table-flex-total"></div>
+<div class ="table-flex-body">
+    <div class ="table-flex-body table-dotted table-20">${unidades[indice].cia}</div>
+    <div class ="table-flex-body table-dotted table-30">${unidades[indice].nome}</div>
+    <div class ="table-flex-body table-dotted table-30"></div>
+    <div class ="table-flex-body table-dotted table-20"></div>
 </div>
 `);
 quantidadeDeUnidades --;
@@ -47,10 +47,10 @@ let quantidadeDePeriodos = periodoCiad.reverse().length;
 while(quantidadeDePeriodos){
     const indice = quantidadeDePeriodos - 1;
      minhaTabelaCiad.insertAdjacentHTML('beforeend',`
-<tr>
-    <td>${periodoCiad[indice].tempo}</td>
-    <td></td>
-</tr>
+<div class ="table-flex-body ">
+    <div class ="table-flex-body table-dotted table-50">${periodoCiad[indice].tempo}</div>
+    <div class ="table-flex-body table-dotted table-50"></div>
+</div>
 `);
 quantidadeDePeriodos --;
 }
