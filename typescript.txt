@@ -1,0 +1,59 @@
+npm init
+npm install --save-dev typescript
+npm install lite-server ( arquivo json coloca scripts "start":"lite-server")
+arquivo json coloca script "watch":"tsc --watch")
+
+cria arquivo index.html
+dentro do arquivo 
+<script src="dist/app.js" defer></script>
+
+no arquivo app.js
+let button = document.getElementById('button');
+let input1 = document.getElementById('input1');
+let input2 = document.getElementById('input2');
+
+function somarNumeros(numero1, numero2){
+	return numero1 + numero2;
+}
+
+button.addEventListener('click', () => {
+ 	console.log(somarNumeros(input1.value, input2.value))
+})
+
+para criar um typescript extensão .ts
+tsc init
+
+let button = document.getElementById('button');
+let input1 = document.getElementById('input1') as HTMLInputElement;
+let input2 = document.getElementById('input2') as HTMLInputElement;
+
+function somarNumeros(numero1:number, numero2:number){
+	return numero1 + numero2;
+}
+if( button){
+button.addEventListener('click', () => {
+ 	if (input1 && input2) {
+		console.log(somarNumeros(Number(input1.value), Number(input2.value))
+}})
+}
+
+configuração básica TS
+npm init
+npm install -g typescript
+tsconfig.json 
+"outDir":"dist",
+"rootDir" : "src",
+),
+"include":["src/**/*.ts"]
+
+
+void é o tipo para função que nao retorna nenhumvalor
+
+callback vai rodar quando certo coisa ocorrer
+
+
+
+
+
+
+
