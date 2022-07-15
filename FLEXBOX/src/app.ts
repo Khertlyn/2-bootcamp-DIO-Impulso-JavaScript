@@ -3,7 +3,7 @@ let year: Number = date.getFullYear() ;
 let month: Number = date.getMonth() + 1;
 let day: Number = date.getDate();
 //var dateOk = day + "/" + month + "/" + year;
-//document.getElementById(".current_date").innerHTML =  day + "/" + month + "/" + year ;
+//document.querySelector("#current_date").innerHTML =  day + "/" + month + "/" + year ;
 
 const unidades = [
     { cia:"1ªcia", anuncio:"sede", nome:"Sede" },
@@ -18,11 +18,11 @@ const unidades = [
     { cia:"2ªcia", anuncio:"sede", nome:"3ª Cia PV" },
     { cia:"2ªcia", anuncio: "uba", nome:"Astolfo dutra" },
 ];
-let dataAtual = document.querySelector('#current_date') ;
+//let dataAtual = document.querySelector('#current_date') ;
 let minhaTabela = document.querySelector('#table-flex-body') as HTMLInputElement ;
 let quantidadeDeUnidades = unidades.reverse().length;
 
-dataAtual?.insertAdjacentHTML('beforeend',`${day} + "/" + ${month} + "/" + ${year}`);
+//dataAtual?.insertAdjacentHTML('beforeend',`${day} + "/" + ${month} + "/" + ${year}`);
 
 while(quantidadeDeUnidades){
     const indice = quantidadeDeUnidades - 1;

@@ -18,10 +18,10 @@ const unidades = [
     { cia: "2ªcia", anuncio: "sede", nome: "3ª Cia PV" },
     { cia: "2ªcia", anuncio: "uba", nome: "Astolfo dutra" },
 ];
-let dataAtual = document.querySelector('#current_date');
+//let dataAtual = document.querySelector('#current_date') ;
 let minhaTabela = document.querySelector('#table-flex-body');
 let quantidadeDeUnidades = unidades.reverse().length;
-dataAtual === null || dataAtual === void 0 ? void 0 : dataAtual.insertAdjacentHTML('beforeend', `${day} + "/" + ${month} + "/" + ${year}`);
+//dataAtual?.insertAdjacentHTML('beforeend',`${day} + "/" + ${month} + "/" + ${year}`);
 while (quantidadeDeUnidades) {
     const indice = quantidadeDeUnidades - 1;
     minhaTabela === null || minhaTabela === void 0 ? void 0 : minhaTabela.insertAdjacentHTML('beforeend', `
