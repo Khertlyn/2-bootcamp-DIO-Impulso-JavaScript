@@ -1,0 +1,20 @@
+css feito em camelcase
+npm install --save styled-components
+
+stateful: usa estados
+criado com classes
+é necessário conhecer o ciclo de vida
+
+
+
+stateless: não usa estados
+function components , estado pode ser manipulado usando hooks
+
+formularios
+
+
+npm install react-redux
+npm i -D redux-devtools
+
+instalar redux devTools no chrome
+
