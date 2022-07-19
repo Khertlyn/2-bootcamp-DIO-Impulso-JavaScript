@@ -18,3 +18,20 @@ npm i -D redux-devtools
 
 instalar redux devTools no chrome
 
+
+trabalhando com hooks
+
+npx create-react-app nomeemletraminusculasem-espaco
+
+organizando o projeto
+rodar o projeto npm start
+
+pasta Components (pra cada componente cria uma pasta)
+  pasta App coloca arquivo App js e css na pasta
+
+
+
+
+
+
+
