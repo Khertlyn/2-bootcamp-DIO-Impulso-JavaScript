@@ -1,0 +1,183 @@
+Protocolo HTTP
+GET / POST / 
+Métodos seguros - Operação de leitura
+GET / OPTION / POST
+
+servidores http
+XAMPP / APACHE
+
+
+Chave simétrica
+
+ssl -secure socket layer
+
+websocket
+API que utiliza estrutura existente em HTTP porta 80 e 443
+voltado para aplicação de tempo real
+
+configurando react
+npm init
+npm install --save react react-dom @react-scripts
+
+arquivo json acrescentar script
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+
+Arquivo padrao index.js
+
+import React from "react"
+import ReactDOM from "react-dom"
+import "./style.css"
+
+const table = "primeira tabela"
+const table2 = "segunda tabela"
+
+
+const App = () => {
+    return (
+        <div className = "App">
+            Hello Word
+            <div>
+                {table}
+                <br></br>
+                {table2}
+            </div>
+        </div>
+
+    )
+}
+
+const rootElement = document.getElementById("root")
+ReactDOM.render(<App />,rootElement)
+
+JSX - quando é um arquivo react o nome começa com letra maiuscula e extensão jsx
+
+Webpack
+entry = ponto de entrada
+output = modulos que serão exportados
+loader = 
+plugins = 
+mode = production, 
+npm i -D webpack webpack-cli webpack-dev-server
+npm i @babel/core babel-loader @babel/preset-env @babel/preset-react -D
+
+cria arquivo webpack.config.js
+const path = require('path')
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  devtool: 'source-map',
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundler.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader"
+          }
+        ]
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html"
+    })
+  ]
+}
+"build":"webpack --mode production",
+"dev":"webpack --mode development",
+"start:dev" : "webpack-dev-server --open --hot --mode development",
+
+arquivo .babelrc
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
+}
+
+EsLint
+usado para manter a qualidade do código
+npm i -D eslint babel-eslint eslint-plugin-react eslint-watch
+"eslint": "eslint ./src/*.js"
+cria arquivo .eslintrc
+{
+  "plugins": [
+    "react"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "semi": [
+      2,
+      "always"
+    ],
+    "indent": [
+      "error",
+      2
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "no-extra-parens": "error",
+    "max-len": [
+      "error",
+      {
+        "code": 100
+      }
+    ],
+    "no-multi-spaces": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "16.8"
+    }
+  }
+}
+
+renderização condicional
+
+react com hooks
+
+
+
+
+
+
+
+
