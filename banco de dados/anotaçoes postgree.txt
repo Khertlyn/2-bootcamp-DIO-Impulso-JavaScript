@@ -1,2 +1,52 @@
-senha postgres
+arquivo postgresql.conf
+C:\Program Files\PostgreSQL\14\data
+dentro do diretorio PGDATA
+LISTEN_ADDRESSES : IP que tera acesso ao BD
+PORT: padrão 5432 , mas pode ser alterado
+MAX_CONNECTIONS: atentar que as conexoes consomem recurso , deixar o mínimo possível
+
+PG_HBA.CONF
+Arquivo responsável pelo controle de autenticação dos usuários no servidor PostgreSQL
+
+PG-IDENT.CONF
+Reponsável por mapear os usuários do BD
+Ex: MAPNAME      SYSTEM-USERNAME      PG-USERNAME
+diretoria      Daniel      pg-diretoria
+comercial      Tiburcio     pg-comercial
+
+*Comandos administrativos postgres podem ser feitos na aba services
+
+cluster : coleção de banco de dados que compartilham as mesmas configurações
+
+Databases ficam dentro dos cluster e possuem schemas onde ficam as tabelas
+
+PGAdmin
+**senha usuario master root
+**senha bd postgres
+quando deparar com problema de conexao
+verificar acesso ao cluster em postgresql.conf
+liberar acesso ao cluster para o usuario do bd em pg_hba.conf
+criar e editar usuarios 
+
+
+no cmd do windows acessar a pasta cd C:\Program Files\PostgreSQL\14\bin
+executar o cmd psql -h 127.0.0.1 -p 5432 -U postgres = senha postgres
+alterar senha usuario master banco de dados
+ALTER USER postgres PASSWORD 'postgres';
+
+create server group
+register server
+preenche nome 
+aba connections 
+host name : 127.0.0.1
+porta 5432 padrão
+maintenance database postgres
+username postgres
+password postgresmarca salvar senha
+
+administrar usuarios postgreSQL
+
+
+
+
 
