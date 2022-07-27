@@ -1,4 +1,4 @@
-arquivo postgresql.conf
+﻿arquivo postgresql.conf
 C:\Program Files\PostgreSQL\14\data
 dentro do diretorio PGDATA
 LISTEN_ADDRESSES : IP que tera acesso ao BD
@@ -45,6 +45,97 @@ username postgres
 password postgresmarca salvar senha
 
 administrar usuarios postgreSQL
+
+LIKE é case sensitive e ILIKE não
+% indica que pode ser qualquer caracter 
+
+SELECT condição (WHERE / AND / OR)
+=, >, <, <>, !=, LIKE, ILIKE, IN
+
+INSERT INTO agencia (banco_numero,numero,nome) VALUES (341,1,'centro) ON CONFLIT (banco_numero, numero) DO NOTHING;
+
+UPDATE (tabela) SET 
+
+TRUNKATE [table][only] name [*][,...]
+limpa tabela	
+
+
+funções agregadas postgresql
+
+SELECT * FROM information_schema.columns WHERE table_name ='nome_tabela'
+
+AVG = traz a média dos valores
+SELECT AVG (valor) FROM cliente_transacoes WHERE;
+
+COUNT = conta valores (pode usar DISTINCT)
+SELECT COUNT DISTINCT(numero), email
+FROM cliente
+WHERE email ILIKE 'gmail.com'
+GROUP BY email;
+
+MAX = retorna o maior numero
+SELECT MAX (valor),tipo_transacao_id
+FROM cliente_transacoes
+GROUP BY tipo_transacao_id;
+
+MIN = retorna o menor numero
+
+
+SUM = Retorna a soma dos valores
+SELECT SUM (valor) , tipo_transacao_id
+FROM cliente_transacao
+GROUP BY tipo_transacao_id
+ORDER BY tipo_transacao_id; (desc)
+
+Trabalhando com JOINS
+JOIN / LEFT JOIN / RIGHT JOIN / FULL JOIN / CROSS JOIN
+SELECT tabela_1.campos, tabela_2.campos
+FROM tabela_1
+ JOIN tabela_2
+  ON tabela_2.campo = tabela_1.campo
+
+Posso utilizar mais uma condição com AND
+
+Funções agregadas
+
+WITH clientes_e_transacoes AS (
+ SELECT cliente.nome AS cliente_nome,
+        tipo_transacao.nome AS tipo_transacao_nome
+	cliente_transacoes.valor AS tipo_transacao_valor
+ FROM cliente_transacoes
+ JOIN cliente ON cliente.numero = cliente_transacoes.cliente_numero
+ JOIN tipo_transacao ON tipo_transacao.id = cliente_transacoes.tipo_transacao_id
+
+SELECT cliente_nome, tipo_transacao_nome,tipo_transacao_valor
+FROM clientes_e transacoes;
+
+
+VIEWS
+são camadas para as tabelas 
+SELECT, INSERT, UPDATE E DELETE
+CREATE OR REPLACE VIEW vw_name AS (
+SELECT numero, nome,ativo
+FROM banco)
+
+WITH LOCAL CHECK OPTION ( valida a condicao da view)
+
+Transacoes
+
+BEGIN -> COMMIT
+
+SAVEPOINT my_savepoint
+
+ROLLBACK TO my_savepoint
+
+FUNÇÕES
+Conjunto de códigos que são executadas dentro de uma transação.
+
+CREATE OR REPLACE FUNCTION [nome da função]
+
+
+
+
+
 
 
 
