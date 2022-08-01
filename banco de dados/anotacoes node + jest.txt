@@ -1,0 +1,84 @@
+npm init --y
+npm add nodemon
+npm install (instala todas as dependencias listadas no package.json
+
+
+
+Subindo o servidor com express
+
+-npm add express
+-acrescenta no package.json antes de scripts  "type" : "module", para que reconheça o import express from "express"; (nesse formato)
+
+
+index.js
+import express from "express";
+
+const server = express();
+
+server.listen(5000, () => {
+    console.log ('servidor on na porta 5000')
+})
+
+criando rotas
+pasta constrollers arquivo usersController - vai conter o codigo de validacao dos metodos
+import { database } from "../database.js"
+
+const usersController = {
+    criarUsuario (request, response) {
+        const { name } = request.body
+        
+        if(name.length < 1 ){
+            return response.status(403).json({mensagem: 'não é possível criar usuario com nome vazio'})
+        }
+        
+        database.push(name)
+        return response.status(201).json({'mensagem': `usuário ${name} criado`})
+    },
+    listarUsuario (request, response) {
+    return response.status(200).json([database])
+}
+}
+export {usersController}
+
+routes.js
+vai conter as rotas 
+import { request, response, Router } from "express"
+import { usersController } from "./controllers/usersController.js"
+import { database } from "./database.js"
+
+const routes = Router()
+
+
+routes.get('/users', usersController.listarUsuario)
+
+routes.post('/users', usersController.criarUsuario)
+export {routes}
+
+*Implementando o Typescript
+npm add -D typescript
+npx tsc --init
+cria arquivo index.ts
+
+npm add -D ts-node-dev
+
+npm add -D @types/express 
+
+npx tsc index.ts
+
+thunder client
+
+jest permite automatizar teste
+npm add -D jest
+npm add -D @types/jest -ts-jest
+
+extensao jest runner permite que rode o teste direto no código
+
+npx jest --init
+sim-sim-node-no-v8-yes
+
+tirar comentário no arquivo jest.config.ts
+testMatch:
+
+
+
+

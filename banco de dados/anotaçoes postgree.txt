@@ -34,6 +34,9 @@ executar o cmd psql -h 127.0.0.1 -p 5432 -U postgres = senha postgres
 alterar senha usuario master banco de dados
 ALTER USER postgres PASSWORD 'postgres';
 
+\du = mostra as roles criadas no BD
+
+
 create server group
 register server
 preenche nome 
@@ -45,6 +48,47 @@ username postgres
 password postgresmarca salvar senha
 
 administrar usuarios postgreSQL
+
+criando a ROLE
+CREATE ROLE professores NOCREATEDB NOCREATEROLE INHERIT NOLOGIN NOBYPASSRLS CONNECTION LIMIT 10; 
+
+CREATE ROLE daniel INHERIT LOGIN PASSWORD '123' IN ROLE professores;
+
+INHERIT indica se a ROLE vai herdar as permissoes de outra role
+
+associação entre roles
+no momento da criação
+IN ROLE (passa a pertencer a role informada)
+ROLE (a role informada passa pertencer a nova role)
+
+após a criação
+GRANT [role a ser concedida] TO [ role a assumir as permissões]
+grant são privilégios de acesso
+
+desassociar membros entre roles
+REVOKE[role que será revogada] FROM [role que terá suas permissões revogadas]
+REVOKE professores FROM daniel;
+
+alterar uma role : ALTER ROLE
+ALTER ROLE professores PASSWORD '123';
+
+excluir uma role: DROP ROLE
+DROP ROLE daniel;
+
+CREATE DATABASE name;
+
+ALTER DATABASE name RENAME TO new_name
+
+boa prática é utilizar IF NOT EXISTS | IF EXISTS
+
+SELECT (campos,) FROM tabela [condições]
+
+
+
+
+
+
+
 
 
 
