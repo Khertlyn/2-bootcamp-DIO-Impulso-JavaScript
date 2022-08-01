@@ -78,6 +78,28 @@ sim-sim-node-no-v8-yes
 
 tirar comentário no arquivo jest.config.ts
 testMatch:
+preset: 'ts-jest'
+
+cria arquivo com mesmo nome do arquivo que vou testar
+
+usersController.test.ts
+describe('Users Controller', () =>{
+	it('Deve somar 1 + 1 , () = >
+		expect(1+1).toBe(2)
+	})
+})
+
+triplo A
+Arrange : Preparação no cenário
+act : Testar a ação
+Assert : validação se o teste vai passar
+
+adicionar no final no tsconfig.json
+"include": [ "src" ],
+"exclude": ["./**/*.test.ts,
+		"./src/mocks]
+
+
 
 
 
