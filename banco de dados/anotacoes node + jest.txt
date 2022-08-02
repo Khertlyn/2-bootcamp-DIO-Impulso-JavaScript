@@ -96,8 +96,20 @@ Assert : validação se o teste vai passar
 
 adicionar no final no tsconfig.json
 "include": [ "src" ],
-"exclude": ["./**/*.test.ts,
-		"./src/mocks]
+"exclude": ["./**/*.test.ts",
+		"./src/mocks"]
+
+
+
+mudar module no package
+"type": "commonjs",
+acresentar script 
+"build":"rm -rf ./build && tsc",
+alterar pasta do start
+"start": "node build/index.js", 
+
+descomentar no tsconfig
+"moduleResolution": "node",   
 
 
 
