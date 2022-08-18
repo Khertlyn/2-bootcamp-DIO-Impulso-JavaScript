@@ -109,7 +109,24 @@ alterar pasta do start
 "start": "node build/index.js", 
 
 descomentar no tsconfig
-"moduleResolution": "node",   
+"moduleResolution": "node",  
+
+
+TDD - test com Jest 
+Escreve o teste que falhe
+faça o código funcionar
+elimine redundância
+
+
+
+3 fotos dentro da vitaura utilizando o radio da viatura
+
+3 fotos ao lado da vitura com epi de combate a incendio
+
+vídeo viatura abt na escuta 
+
+
+
 
 
 
